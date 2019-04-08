@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="punchbag">
+        <h2>Punchbag</h2>
+        <!-- <h3>{{test}}</h3> -->
+        <div id="bag" v-bind:class="{burst: ended}">
+
+        </div>
+        <div id="bag-health">
+            <div v-bind:style="{width: health + '%'}"></div>
+        </div>
+
+        <div id="controls">
+            <button v-on:click="punch" v-show="!ended">Punch</button>
+            <button v-on:click="restart" >Restart</button>
+            <button v-on:click="asd">asd</button>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
